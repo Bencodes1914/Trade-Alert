@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background: black;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#container{
+    max-width: 750px;
+    margin: 0 auto;
+    background: linear-gradient(145deg, #1e1e1e 0%, #2a2a2a 100%);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-title{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(196, 240, 131);
+}
+
+.header-time{
+    font-size: 16px;
+    font-size: medium;
+    color: white;
+}
+
+hr{
+    border: 0;
+    border-top: 1px solid #444;
+    margin: 15px 0;
+}
+
+.tab-switch{
+    display: flex;
+    /* background: rgba(255, 255, 255, 0.05); */
+    border-radius: 12px;
+    padding: 4px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+}
+
+.tab-option{
+    flex: 1;
+    padding: 12px 16px;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.tab-option.active{
+    background: rgb(40, 61, 3);
+    color: white;
+}
+
+.tab-option.active:hover{
+    background: linear-gradient(135deg, #67d46a 0%, #5cb961 100%);
+}
+
+.tab-option:not(.active){
+    background: rgba(105, 44, 5, 0.3);
+    color: white;
+}
+
+.tab-option:not(.active):hover{
+    background: rgba(112, 54, 17, 0.3);
+}
+
+.grass-img > img, .aixbt-img > img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.price-section {
+   margin-bottom: 24px;
+   display: inline-block;
+}
+
+.price {
+   font-size: 48px;
+   font-weight: 700;
+   color: #ffffff;
+   margin-bottom: 8px;
+}
+
+.price-change {
+    display: inline-block;
+    background: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 12px;
+}
+
+.chart-container {
+    height: 240px;
+    background: #0b130a;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.price-range {
+    position: absolute;
+    right: 12px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 11px;
+    color: #666;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.section-content {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.metrics {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    gap: 16px;
+    margin-bottom: 24px;
+    border-radius: 550px;
+}
+
+.metric {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: #0b130a;
+}
+
+.metric-label {
+    font-size: 14px;
+    color: #888;
+}
+
+.metric-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.metric-value.blue {
+    color: #589993;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.btn {
+    padding: 16px 24px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    flex: 4;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    flex: 1;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.see-more {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.see-more:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

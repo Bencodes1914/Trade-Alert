@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Alert</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div class="header-title">Pair Trade Alert</div>
+            <div class="header-time">2 Hours ago</div>
+        </header>
+        <hr>
+        <div class="tab-switch">
+                <div class="tab-option active">
+                    <div class="grass-img">
+                        <img src="./images/grass.png"/>
+                    </div>
+                    GRASS
+                </div>
+                <div class="tab-option">
+                    <div class="aixbt-img">
+                        <img src="./images/aixbt-2-photoaidcom-cropped.png"/>
+                    </div>
+                    AIXBT
+                </div>
+        </div>
+       <div class="chart-container">
+            <div class="price-section">
+                <div class="price">18.96<span class="price-change">+13.5%</span></div>
+            </div>
+            
+            <div class="chart-line">
+                <canvas id="chartCanvas" width="400" height="180"></canvas>
+            </div>
+            
+            <div class="price-range">
+                <div>$30</div>
+                <div>$25</div>
+                <div>$20</div>
+                <div>$15</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">Trading Style:</div>
+            <div class="section-content">
+                Provides real-time advanced correlation insights using copula methods. Best for active traders in fast-moving<br> markets requiring immediate signal updates.
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">Remarks:</div>
+            <div class="section-content">
+                The existing analysis strongly supports a long position in GRASSUSDT due to its stable high funding rate,<br> rising open interest momentum (+1.43%), and consistent price growth, indicating strong bullish sentiment.<br> GRASSUSDT also has high short liquidations with increasing trends, signaling potential bullish sent <a href="#" class="see-more">See more...</a>
+            </div>
+        </div>
+        <div class="metrics">
+            <div class="metric">
+                <div class="metric-label">Correlation:</div>
+                <div class="metric-value">0.47</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">Cointegrated:</div>
+                <div class="metric-value">False</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">Speed:</div>
+                <div class="metric-value">1.7</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">Z-Score:</div>
+                <div class="metric-value">0.7</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">Beta:</div>
+                <div class="metric-value">0.63</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">Trading Engine:</div>
+                <div class="metric-value blue">Hyperliquid</div>
+            </div>
+        </div>
+        <div class="actions">
+            <button class="btn btn-primary">Open Position</button>
+            <button class="btn btn-secondary">Copy Link
+                <img src="./images/copy.png"/>
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
