@@ -165,6 +165,7 @@ hr{
     align-items: center;
     padding: 12px;
     background: #0b130a;
+    border-top: 1px solid #0f250c;
 }
 
 .metric-label {
