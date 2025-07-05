@@ -48,7 +48,6 @@ hr{
 
 .tab-switch{
     display: flex;
-    /* background: rgba(255, 255, 255, 0.05); */
     border-radius: 12px;
     padding: 4px;
     margin-bottom: 24px;
@@ -155,8 +154,6 @@ hr{
 }
 
 .metrics {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr; */
     gap: 16px;
     margin-bottom: 24px;
     border-radius: 550px;
@@ -208,7 +205,7 @@ hr{
 .btn-primary {
     background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
     color: white;
-    flex: 4;
+    flex: 3;
 }
 
 .btn-primary:hover {
