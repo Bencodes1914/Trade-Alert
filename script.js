@@ -23,3 +23,72 @@ const canvas = document.getElementById('chartCanvas');
         ctx.strokeStyle = 'green';
         ctx.lineWidth = 1;
         ctx.stroke();
+
+const copyButton = document.querySelector('.btn-secondary');
+const copyIcon = copyButton.querySelector('img');
+
+copyButton.addEventListener('click', async function() {
+    try {
+        await navigator.clipboard.writeText(window.location.href);
+        
+        const originalText = copyButton.innerHTML;
+        
+        copyButton.innerHTML = `
+            Copied
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+            </svg>
+        `;
+        
+        copyButton.style.background = 'rgba(255, 255, 255, 0.1)';
+        copyButton.style.color = '#ffffff';
+        copyButton.style.borderColor = '1px solid rgba(255, 255, 255, 0.2)';
+        
+        setTimeout(() => {
+            copyButton.innerHTML = originalText;
+            copyButton.style.background = 'rgba(255, 255, 255, 0.1)';
+            copyButton.style.color = '#ffffff';
+            copyButton.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+        }, 2000);
+        
+    } catch (err) {
+        console.error('Failed to copy: ', err);
+        
+        const textArea = document.createElement('textarea');
+        textArea.value = window.location.href;
+        document.body.appendChild(textArea);
+        textArea.select();
+        
+        try {
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            
+            const originalText = copyButton.innerHTML;
+            copyButton.innerHTML = `
+                Copied
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                </svg>
+            `;
+            
+            copyButton.style.background = 'rgba(76, 175, 80, 0.2)';
+            copyButton.style.color = '#4CAF50';
+            copyButton.style.borderColor = '#4CAF50';
+            
+            setTimeout(() => {
+                copyButton.innerHTML = originalText;
+                copyButton.style.background = 'rgba(255, 255, 255, 0.1)';
+                copyButton.style.color = '#ffffff';
+                copyButton.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+            }, 2000);
+            
+        } catch (fallbackErr) {
+            console.error('Fallback copy failed: ', fallbackErr);
+            alert('Copy failed. Please copy the URL manually.');
+        }
+    }
+});
+
+copyButton.style.transition = 'all 0.3s ease';
